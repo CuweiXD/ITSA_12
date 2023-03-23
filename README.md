@@ -24,19 +24,25 @@ f(k) 的計算結果。
 ### 解答
 ```
 #include <iostream>
-#include<iomanip>
 using namespace std;
 
+int f(int(x))
+{
+
+    if (x == 0 || x == 1) {
+
+        return x + 1;
+    }
+
+    else if (x > 1) {
+        return f(x - 1) + f(x / 2);
+    }
+
+}
 int main()
 {
-    double x = 0;
-    double ans = 0;
-
+    int x;
     cin >> x;
-    ans = x * 1.6;
-
-    cout << fixed << setprecision(1) << ans << endl;
-
-    return 0;
+    cout << f(x) << endl;
 }
 ```
